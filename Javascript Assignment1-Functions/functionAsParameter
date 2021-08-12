@@ -1,0 +1,13 @@
+function getCube(square,number)
+{
+  var result;
+  result=number*square;
+  return result;
+}
+
+function getSquare(number)
+{
+  return number*number;
+}
+
+console.log(getCube(getSquare(10),10));

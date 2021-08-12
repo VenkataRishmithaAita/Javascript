@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Storage</title>
+  <script>
+  function triggerSession()
+  {
+      if(sessionStorage.clickcount)
+      {
+      sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+      } 
+      else
+      {
+        sessionStorage.clickcount=1;
+      }
+      
+      document.getElementById("click1").innerHTML="Session Score: "+sessionStorage.clickcount+"time(s).";
+   
+   }
+  
+  function triggerLocal()
+  {
+      if(localStorage.clickcount)
+      {
+        localStorage.clickcount=Number(localStorage.clickcount)+1;
+    
+      }
+      else
+      {
+        localStorage.clickcount=1;
+      }
+     
+      document.getElementById("click2").innerHTML="Local Score: "+localStorage.clickcount +"time(s).";
+   
+  }
+  
+ 
+  </script>
+</head>
+<body>
+  <p>
+  <button onclick="triggerSession();triggerLocal();"  type="button">Click Me!  </button></p>  
+ 
+  <div id="click1"></div>
+  <div id="click2"></div>
+</body>
+</html> 
+
+
